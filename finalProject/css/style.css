@@ -1,0 +1,87 @@
+html{
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #dedede;
+    padding: 5px;
+    margin: 15px;
+    font-size: 25px;
+    font-family:Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-family:Arial, sans-serif;
+    font-size: 1.95em;
+}
+
+h2{
+    text-align:center;
+  }
+
+li{
+    margin-top: 20px;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 90%;
+    justify-content: space-evenly;
+}
+img{
+    border: 5px solid blue;
+    border-radius: 35px;
+    width: 100%;
+    height: 15em;
+  }
+  figcaption{
+    text-align: center;
+  }
+
+.label{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+@media screen and (min-width:772px)
+{
+    .grid{
+        grid-template-columns: 45% 45%;
+    }
+    img{
+        border-radius: 50%;
+        border:5px solid blue;
+    }
+    .grid figure:last-child{
+        border-radius: initial;
+        grid-column: 1/span 2;
+    }
+}
+
+@media screen and (min-width:992px)
+{
+    img{
+        border-radius:0%;
+        border:5px solid blue;
+    }
+    .grid figure:nth-child(3n){
+        grid-column: 1/span 2;
+    }
+}
+
+@media (prefers-reduced-motion) {
+    html{
+        scroll-behavior: unset;
+    }
+}
+
+@media (prefers-color-scheme: dark){
+    *{
+        color:rgba(255, 255, 0,0.6)
+    }
+    body{
+        background-color: rgba(0,0,0,0.6) ;
+    }
+    img{
+        border:5px solid black;
+    }
+}
